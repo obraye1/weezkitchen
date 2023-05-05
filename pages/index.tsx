@@ -5,6 +5,8 @@ import Hero from '@/components/Hero';
 import NavBar from '@/components/NavBar';
 
 export default function Home() {
+
+
   return (
     <div>
       <Head>
@@ -13,8 +15,7 @@ export default function Home() {
         <title>WeezKitchen</title>
       </Head>
       <main>
-        <NavBar />
-        {/* <Hero /> */}
+        <Hero />
       </main>
     </div>
   );

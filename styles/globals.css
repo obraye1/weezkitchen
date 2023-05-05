@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
 
-
+  scroll-behavior: smooth;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.custom-img {
+  background-image: url('../assets/weez.jpg');
+}

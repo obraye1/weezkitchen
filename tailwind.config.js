@@ -12,6 +12,7 @@ module.exports = {
       dark: '#946E4C',
       zinc:  '#d4d4d8',
       zincbg: '#e4e4e7',
+      gre : '#D9DAFF'
     },
     screens: {
       sm: '640px',
