@@ -33,7 +33,7 @@ const NavBar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 right-0 top-0 w-full z-10 ease-in duration-300"
+      className="fixed left-0 right-0 top-0 w-screen z-10 ease-in duration-300"
     >
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-[white] ">
         <Link href="/">
@@ -71,8 +71,8 @@ const NavBar = () => {
           </button>
         </div>
         {/* z-10 to display on top of the overlay */}
-        <div onClick={handleClick} className="sm:hidden block z-10">
-          {nav ? <AiOutlineClose size={40} style={{ color: `${textColor}` }}/> : <AiOutlineMenuFold size={40} style={{ color: `${textColor}` }}/>}
+        <div onClick={handleClick} className="sm:hidden block z-10 cursor-pointer">
+          {nav ? <AiOutlineClose size={30} style={{ color: `${textColor}` }}/> : <AiOutlineMenuFold size={30} style={{ color: `${textColor}` }}/>}
         </div>
         {/* Mobile Menu*/}
         <div
@@ -92,14 +92,14 @@ const NavBar = () => {
             <li className="p-4 text-4xl hover:text-gold">
               <Link href="/contact">Contact</Link>
             </li>
-            <div className="z-10 pb-[60px] pt-[120px] flex gap-5 items-center justify-center">
+            <div className="z-10 pb-[40px] pt-[120px] cursor-pointer flex gap-5 items-center justify-center">
               <AiOutlineInstagram size={20} color="gold" />
               <AiOutlineFacebook size={20} color="blue" />
             </div>
             <div>
               <button
                 className="px-8 py-3 text-[white] border border-[white]
-    hover:bg-transparent hover:text-dark rounded-lg hover:drop-shadow-lg"
+    hover:bg-transparent hover:text-goldd rounded-lg hover:drop-shadow-lg"
               >
                 Place Order
               </button>
