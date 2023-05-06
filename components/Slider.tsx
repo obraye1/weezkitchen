@@ -21,15 +21,15 @@ const Slider = ({ slides }: any) => {
       <h1 className="text-2xl font-bold text-center p-4">Bread Menu</h1>
       <div>
         <div className="flex relative justify-center p-4">
-        {sliderData.map((slide, index) => (
-          <div
-            key={index}
-            className={
-              index === current
-                ? 'opacity-[1] ease-in duration-1000'
-                : 'opacity-0'
-            }
-          >
+          {sliderData.map((slide, index) => (
+            <div
+              key={index}
+              className={
+                index === current
+                  ? 'opacity-[1] ease-in duration-1000'
+                  : 'opacity-0'
+              }
+            >
               <FaArrowCircleLeft
                 onClick={prevSlide}
                 size={50}
@@ -39,10 +39,15 @@ const Slider = ({ slides }: any) => {
                 <Image
                   src={slide.image}
                   alt="Picture of Bread"
-                  width={1440}
-                  height={600}
                   priority
-                  style={{ objectFit: 'cover' , height:'500px', width:'1440px'}}
+                  width={1440}
+                  height={500}
+                  className="rounded-xl"
+                  style={{
+                    objectFit: 'cover',
+                    height: '500px',
+                    width: '1440px',
+                  }}
                 />
               )}
               <FaArrowCircleRight
@@ -51,8 +56,8 @@ const Slider = ({ slides }: any) => {
                 className="absolute right-[30px] top-[50%] text-[white]/70 cursor-pointer select-none z-[2]"
               />
             </div>
-        ))}
-          </div>
+          ))}
+        </div>
       </div>
     </div>
   );
