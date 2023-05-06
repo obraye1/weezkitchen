@@ -61,7 +61,10 @@ const NavBar = () => {
           </ul>
         </div>
         <div style={{ color: `${textColor}` }} className="hidden md:flex ">
-          <AiOutlineInstagram className=" pr-2 flex items-center text-5xl cursor-pointer " />
+          <AiOutlineInstagram
+            color="#C13584"
+            className=" pr-2 flex items-center text-5xl cursor-pointer "
+          />
           <button
             style={{ color: `${textColor}` }}
             className="px-5 py-2 text-[white] border-4 border-gold
@@ -71,8 +74,15 @@ const NavBar = () => {
           </button>
         </div>
         {/* z-10 to display on top of the overlay */}
-        <div onClick={handleClick} className="sm:hidden block z-10 cursor-pointer">
-          {nav ? <AiOutlineClose size={20} style={{ color: `${textColor}` }}/> : <AiOutlineMenuFold size={20} style={{ color: `${textColor}` }}/>}
+        <div
+          onClick={handleClick}
+          className="sm:hidden block z-10 cursor-pointer"
+        >
+          {nav ? (
+            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+          ) : (
+            <AiOutlineMenuFold size={20} style={{ color: `${textColor}` }} />
+          )}
         </div>
         {/* Mobile Menu*/}
         <div
@@ -83,7 +93,10 @@ const NavBar = () => {
           }
         >
           <ul className="pt-[260px] h-screen">
-            <li onClick={handleClick} className="p-4 border-b text-4xl hover:text-gold">
+            <li
+              onClick={handleClick}
+              className="p-4 border-b text-4xl hover:text-gold"
+            >
               <Link href="/">Home</Link>
             </li>
             <li onClick={handleClick} className="p-4 text-4xl hover:text-gold">
@@ -92,12 +105,16 @@ const NavBar = () => {
             <li onClick={handleClick} className="p-4 text-4xl hover:text-gold">
               <Link href="/contact">Contact</Link>
             </li>
-            <div onClick={handleClick} className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center">
-              <AiOutlineInstagram size={20} color="gold" />
-              <AiOutlineFacebook size={20} color="blue" />
+            <div
+              onClick={handleClick}
+              className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center"
+            >
+              <AiOutlineInstagram size={30} color="#C13584" />
+              <AiOutlineFacebook size={30} color=" #3B5998" />
             </div>
             <div>
-              <button onClick={handleClick}
+              <button
+                onClick={handleClick}
                 className="px-8 py-3 text-[white] border border-[white]
     hover:bg-transparent hover:text-goldd rounded-lg hover:drop-shadow-lg"
               >
