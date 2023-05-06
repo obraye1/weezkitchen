@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { sliderData } from '@/data/sliderData';
 import React, { useState } from 'react';
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 
 const Slider = ({ slides }: any) => {
   const [current, setCurrent] = useState(0);
@@ -16,16 +17,42 @@ const Slider = ({ slides }: any) => {
   }
 
   return (
-    <div id="menu">
-      <h1>Bread Menu</h1>
+    <div id="menu" className="max-w-[1240px] mx-auto max-h-full">
+      <h1 className="text-2xl font-bold text-center p-4">Bread Menu</h1>
       <div>
+        <div className="flex relative justify-center p-4">
         {sliderData.map((slide, index) => (
-          <div key={index} className={index === current ? 'opacity-[1] ease-in duration-1000' : 'opacity-0'}>
-            {index === current && (
-              <Image src={slide.image} alt="/" width={1440} height={600} />
-            )}
-          </div>
+          <div
+            key={index}
+            className={
+              index === current
+                ? 'opacity-[1] ease-in duration-1000'
+                : 'opacity-0'
+            }
+          >
+              <FaArrowCircleLeft
+                onClick={prevSlide}
+                size={50}
+                className="absolute left-[30px] top-[50%] text-[white]/70 cursor-pointer select-none z-[2]  "
+              />
+              {index === current && (
+                <Image
+                  src={slide.image}
+                  alt="Picture of Bread"
+                  width={1440}
+                  height={600}
+                  priority
+                  style={{ objectFit: 'cover' , height:'500px', width:'1440px'}}
+                />
+              )}
+              <FaArrowCircleRight
+                onClick={nextSlide}
+                size={50}
+                className="absolute right-[30px] top-[50%] text-[white]/70 cursor-pointer select-none z-[2]"
+              />
+            </div>
         ))}
+          </div>
       </div>
     </div>
   );
