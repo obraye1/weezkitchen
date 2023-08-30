@@ -60,6 +60,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
+
         <div style={{ color: `${textColor}` }} className="hidden md:flex ">
           <AiOutlineInstagram
             color="#C13584"
@@ -93,22 +94,16 @@ const NavBar = () => {
           }
         >
           <ul className="pt-[260px] h-screen">
-            <li
-              onClick={handleClick}
-              className="p-4 border-b text-4xl hover:text-gold"
-            >
+            <li className="p-4 border-b text-4xl hover:text-gold">
               <Link href="/">Home</Link>
             </li>
-            <li onClick={handleClick} className="p-4 text-4xl hover:text-gold">
+            <li className="p-4 text-4xl hover:text-gold">
               <Link href="/#menu">Bread Menu</Link>
             </li>
-            <li onClick={handleClick} className="p-4 text-4xl hover:text-gold">
+            <li className="p-4 text-4xl hover:text-gold">
               <Link href="/contact">Contact</Link>
             </li>
-            <div
-              onClick={handleClick}
-              className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center"
-            >
+            <div className="z-10 pb-[25px] pt-[75px] cursor-pointer flex gap-5 items-center justify-center">
               <AiOutlineInstagram size={30} color="#C13584" />
               <AiOutlineFacebook size={30} color=" #3B5998" />
             </div>
